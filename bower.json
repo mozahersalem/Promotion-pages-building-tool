@@ -1,0 +1,27 @@
+{
+    "name": "vodafonetv",
+    "version": "0.0.0",
+    "authors": [
+        "mohamed"
+    ],
+    "description": "my_project",
+    "main": "main.js",
+    "keywords": [
+        "project"
+    ],
+    "license": "MIT",
+    "homepage": "http://www.mywebsite.com",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "vendor",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "lodash": "~2.4.0",
+        "normalize-css": "~2.1.3"
+    }
+}
