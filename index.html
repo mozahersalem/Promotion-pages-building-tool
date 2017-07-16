@@ -7,38 +7,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>test</title>
 
-	<!-- 
-		Development Mode 
-		- uncomment when develop the landing page
-		- comment when deploy 
-	-->
-	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<!-- build:remove -->
+	<link rel="stylesheet" type="text/css" href="dist/global.css">
+	<!-- /build -->
 
-	<!-- 
-		Deploy Mode 
-		- comment when develop the landing page
-		- uncomment when deploy 
-	-->
-	<!-- <link rel="stylesheet" type="text/css" href="css//dist/global.min.css"> -->
+	<!-- build:css inline -->
+	<link rel="stylesheet" type="text/css" href="dist/global.min.css">
+	<!-- /build -->
+
+
 
 
 </head>
 <body>
 
-	<!-- 
-		Development Mode 
-		- uncomment when develop the landing page
-		- comment when deploy 
-	-->
-	<script type="text/javascript" src="js/dist/app.js"></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 
-	<!-- 
-		Deploy Mode 
-		- comment when develop the landing page
-		- uncomment when deploy 
-	-->
-	<!-- <script type="text/javascript" src="js/dist/app.min.js"></script> -->
+<!-- DO NOT modify next comments -->
+<!-- build:js inline -->
+	<!--Scripts-->
+<script type="text/javascript" src="dist/app.min.js"></script>
+<!--/Scripts-->
+<!-- /build -->
+
 </body>
 </html>
