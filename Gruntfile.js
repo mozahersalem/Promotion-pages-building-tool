@@ -17,13 +17,13 @@ module.exports = function (grunt) {
         separator: '\n'
       },
       dist: {
-        src: ['js/src/**/*.js'],
+        src: ['js/**/*.js'],
         dest: 'dist/app.js'
       }
     },
 
     jshint: {
-      files: ['Gruntfile.js', 'js/src/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
       options: {
         jshintrc: true
       }
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
     },
 
     jasmine: {
-      src: 'js/src/**/*.js',
+      src: 'js/**/*.js',
       options: {
         specs: 'tests/test_*.js',
         helpers: 'tests/helpers/helper_*.js',
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
         outputSourceFiles: true
       },
       files: {
-        'dist/global.css': 'css/src/global.less'
+        'dist/global.css': 'css/global.less'
       }
     }
   },
@@ -82,6 +82,7 @@ module.exports = function (grunt) {
         ]
       }
     },
+    
     build: {
       files: {
         'index.html': [
@@ -97,14 +98,14 @@ module.exports = function (grunt) {
     },
     dist: {
       files: {
-        'dist/upload/index.html': ['index.html']
+        'index.concat.html': ['index.html']
       }
     }
   },
 
   watch: {
-    files: ['<%= jshint.files %>', '*.js', '*.css'],
-    tasks: ['concat', 'less',  'jshint', 'jasmine'] // templates here
+    files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
+    tasks: ['concat', 'less'] // templates here ,  'jshint', 'jasmine'
   }
 });
 
