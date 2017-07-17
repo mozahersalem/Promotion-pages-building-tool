@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     meta: {
       version: '0.0.0'
     },
-
+    // concat all .js file to dist/app.js
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -21,14 +21,13 @@ module.exports = function (grunt) {
         dest: 'dist/app.js'
       }
     },
-
     jshint: {
       files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
       options: {
         jshintrc: true
       }
     },
-
+    // minify app.js to app/min.js
     uglify : {
       options: {
         mangle: {
@@ -41,7 +40,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     jasmine: {
       src: 'js/**/*.js',
       options: {
@@ -50,64 +48,58 @@ module.exports = function (grunt) {
         vendor: 'vendor/**/*.js'
       }
     },
-
     less: {
-    production: {
-      options: {
-        banner: '<%= banner %>',
-        // paths for @import directives
-        paths: [
-        'css/src'
-        ],
-        outputSourceFiles: true
+      production: {
+        options: {
+          banner: '<%= banner %>',
+          // paths for @import directives
+          paths: [
+          'css/src'
+          ],
+          outputSourceFiles: true
+        },
+        files: {
+          'dist/global.css': 'css/global.less'
+        }
+      }
+    },
+    cssmin : {
+      css:{
+        src: 'dist/global.css',
+        dest: 'dist/global.min.css'
+      }
+    },
+    // add app.js file when (gulp watch), app.min.js (gulp dist)
+    include_js: {
+      source: {
+        files: {
+          'index.html': ['dist/app.js']
+        }
       },
-      files: {
-        'dist/global.css': 'css/global.less'
-      }
-    }
-  },
-
-  cssmin : {
-    css:{
-      src: 'dist/global.css',
-      dest: 'dist/global.min.css'
-    }
-  },
-
-  include_js: {
-    source: {
-      files: {
-        'index.html': [
-        'dist/app.js'
-        ]
+      build: {
+        files: {
+          'index.html': ['dist/app.min.js']
+        }
       }
     },
-    
-    build: {
-      files: {
-        'index.html': [
-        'dist/app.min.js'
-        ]
-      }
-    }
-  },
 
-  processhtml: {
-    options: {
-      // Task-specific options go here. 
+    processhtml: {
+      options: {
+        // Task-specific options go here. 
+      },
+      dist: {
+        files: {
+          'upload/index.html': ['index.html']
+        }
+      }
     },
-    dist: {
-      files: {
-        'index.concat.html': ['index.html']
-      }
+    watch: {
+      files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
+      tasks: ['concat', 'less'], // templates here ,  'jshint', 'jasmine'
+        options: { livereload: true }
     }
-  },
+  });
 
-  watch: {
-    files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
-    tasks: ['concat', 'less'] // templates here ,  'jshint', 'jasmine'
-  }
-});
 
     // basics
     grunt.loadNpmTasks('grunt-contrib-jshint');

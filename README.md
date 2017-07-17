@@ -1,35 +1,38 @@
 # Mondia_starter
 Landing Page Starter Template
 
+read wiki for full instulation
+https://github.com/mozahersalem/Mondia_starter/wiki/Installalation
+
 
 You will need to install node, npm, grunt
 
 clone the repo and run npm install 
 
 tasks:
+
+# grunt watch
+
 Less to css(global.css), all js files to (app.js)
 
-# grunt 
-
 ```js
 // Project files.
-  css/src/global.less
-    css/src/dist/global.css
+  css/global.less
+  dist/global.css
     
-  js/src/*.js
-    js/dist/spp.js
+  js/**/*.js
+  js/app.js
 ```
+
+# grunt dist
 
 minify (global.css to global.min.css), (app.js to app.min.js)
-# grunt minify
+copy all css from global.min.css
+and js from app.min.js
+and embed in upload/index.html
+
 
 ```js
 // Project files.
-
-   css/src/dist/global.css
-    css/src/dist/global.min.css
-    
-   js/dist/app.js
-    js/dist/qpp.min.js
+   upload/index.html
 ```
-
