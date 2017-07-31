@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     meta: {
       version: '0.0.0'
     },
-    // concat all .js file to dist/app.js
+    // concat all .js file to dist/app.js without minification
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
           banner: '<%= banner %>',
           // paths for @import directives
           paths: [
-          'css/src'
+          'css/'
           ],
           outputSourceFiles: true
         },
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
         dest: 'dist/global.min.css'
       }
     },
-    // add app.js file when (gulp watch), app.min.js (gulp dist)
+    // Include app.js in index when (gulp watch), include app.min.js (gulp dist)
     include_js: {
       source: {
         files: {
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    // when run grunt dist concat all min file and create upload/index
     processhtml: {
       options: {
         // Task-specific options go here. 
@@ -94,10 +94,14 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
-      tasks: ['concat', 'less'], // templates here ,  'jshint', 'jasmine'
-        options: { livereload: true }
-    }
+      scripts: {
+        files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
+        tasks: ['concat', 'less'], // templates here ,  'jshint', 'jasmine'
+        options: {
+          livereload: true 
+        },
+      },
+    },
   });
 
 
@@ -121,7 +125,7 @@ module.exports = function (grunt) {
 
     // tasks
     grunt.registerTask('test', ['jshint', 'jasmine']);
-    grunt.registerTask('default', ['concat', 'less', 'include_js:source']);
+    grunt.registerTask('default', ['watch', 'concat', 'less', 'include_js:source']);
     grunt.registerTask('dist', ['uglify', 'cssmin', 'include_js:build', 'processhtml']);
 
   };

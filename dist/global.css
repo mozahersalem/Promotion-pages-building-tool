@@ -1,0 +1,8 @@
+@import '../../vendor/normalize-css/normalize.css';
+body {
+  font-size: 16px;
+}
+.hide,
+.hidden {
+  display: none;
+}
