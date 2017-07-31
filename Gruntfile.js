@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 
     // tasks
     grunt.registerTask('test', ['jshint', 'jasmine']);
-    grunt.registerTask('default', ['watch', 'concat', 'less', 'include_js:source']);
+    grunt.registerTask('default', ['concat', 'less', 'include_js:source']);
     grunt.registerTask('dist', ['uglify', 'cssmin', 'include_js:build', 'processhtml']);
 
   };
