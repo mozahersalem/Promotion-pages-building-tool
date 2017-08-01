@@ -89,7 +89,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'upload/index.html': ['index.html']
+          'upload/index-unmin.html': ['index.html']
         }
       }
     },
@@ -102,6 +102,18 @@ module.exports = function (grunt) {
         },
       },
     },
+    htmlmin: {     
+      dist: {    
+        options: { 
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'upload/index.html': 'upload/index-unmin.html' 
+         
+        }
+      }
+    }
   });
 
 
@@ -122,10 +134,11 @@ module.exports = function (grunt) {
     // html include
     grunt.loadNpmTasks('grunt-include-js');
     grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // tasks
     grunt.registerTask('test', ['jshint', 'jasmine']);
     grunt.registerTask('default', ['concat', 'less', 'include_js:source']);
-    grunt.registerTask('dist', ['uglify', 'cssmin', 'include_js:build', 'processhtml']);
+    grunt.registerTask('dist', ['uglify', 'cssmin', 'include_js:build', 'processhtml', 'htmlmin']);
 
   };
