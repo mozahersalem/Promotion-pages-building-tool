@@ -54,12 +54,12 @@ module.exports = function (grunt) {
           banner: '<%= banner %>',
           // paths for @import directives
           paths: [
-          'css/'
+          'less/'
           ],
           outputSourceFiles: true
         },
         files: {
-          'dist/global.css': 'css/global.less'
+          'dist/global.css': 'less/global.less'
         }
       }
     },
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
     },
     watch: {
       scripts: {
-        files: ['<%= jshint.files %>', 'js/**/*.js', 'css/**/*.less', 'index.html'],
+        files: ['<%= jshint.files %>', 'js/**/*.js', 'less/**/*.less', 'index.html'],
         tasks: ['concat', 'less'], // templates here ,  'jshint', 'jasmine'
         options: {
           livereload: true 

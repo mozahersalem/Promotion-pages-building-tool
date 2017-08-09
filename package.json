@@ -1,7 +1,7 @@
 {
-  "name": "vodafonetv",
-  "version": "0.0.0",
-  "description": "landing page for vodavoneTV campiagn",
+  "name": "Mondiamedia_Template",
+  "version": "1.0.0",
+  "description": "Scaffolding for Mondia media landing pages",
   "main": "main.js",
   "directories": {
     "test": "tests"
@@ -26,8 +26,10 @@
     "test": "grunt test"
   },
   "keywords": [
-    "my project"
+    "MondiaMedia",
+    "Template",
+    "Scaffolding"
   ],
-  "author": "mohamed",
+  "author": "Mohamed Salem",
   "license": "MIT"
 }

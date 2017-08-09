@@ -5,8 +5,8 @@ Icon?
 Thumbs.db
 
 # scaffold
-css/dist
-js/dist
+dist
+upload
 vendor
 
 # node
