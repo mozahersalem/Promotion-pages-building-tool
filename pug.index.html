@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Landing</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:remove-->
+    <link rel="stylesheet" type="text/css" href="dist/global.css">
+    <!-- /build-->
+    <!-- build:css inline-->
+    <link rel="stylesheet" type="text/css" href="dist/global.min.css">
+    <!-- /build-->
+  </head>
+  <!-- ******************************  DO NOT COPY PASTE ******************************-->
+  <!-- *****************************  Change subscriptionTypeId ***********************-->
+  <!-- subscription type id in mondia media platform e.g. 56830001 for du my world inclusive-->
+  <input id="subscriptionTypeId" type="hidden" value="56830009">
+  <!-- *****************************  Change package id.. **************************-->
+  <!-- package id in mondia media platform-->
+  <input id="packageId" type="hidden" value="70">
+  <!-- *********************************************************************************-->
+  <input id="userToken" type="hidden">
+  <input id="requestId" type="hidden">
+  <input id="otp" type="hidden">
+  <body>
+    <div class="lang"><a href="#">العربية</a></div>
+    <div class="wrapper" id="defaultWrapper">
+      <!-- Variable movie options-->
+      <div class="content"><img class="logo" src="http://du-camp.mondiamediamena.com/assets/img/coolishCool/logo.png" alt="">
+        <button class="subbtn">SUBSCRIBE NOW</button>
+        <div class="price">5 AED per Week!</div>
+        <div class="termstxt">You will be subscribed to 'MyMixtapes'.Your account would be debited with AED 5 per week. Subscription would be automatically renewed until you unsubscribe from the service. To continue, click on subscribe button above.</div>
+      </div>
+    </div>
+    <!-- end wrapper-->
+    <!-- start WiFi wrapper-->
+    <div class="wrapper" id="wifiwrapper" style="display: none;">
+      <div class="content"><img class="logo" src="http://du-camp.mondiamediamena.com/assets/img/coolishCool/logo.png" alt="">
+        <div class="inner-Bottom">
+          <button class="subbtn">DOWNLOAD NOW!<img class="dlbtn" src="http://du-camp.mondiamediamena.com/assets/img/coolishCool/dl_btn.png"></button>
+          <div class="slogan">Unlimited premium Games</div>
+          <div class="slogan2">To download on your mobile phone</div>
+          <div class="termstxt">When you subscribe to this service, you agree on koolishcool terms and condition. You can unsubscribe anytime by visiting My Account. To use this service, you need to be older than 18 years old, or have received permission from your parents or the ones who pays for your mobile bills.</div>
+        </div>
+      </div>
+    </div>
+    <!-- build:js inline-->
+    <!-- Scripts-->
+    <script type="text/javascript" src="dist/app.js"></script>
+    <!-- /Scripts-->
+    <!-- /build-->
+    <!-- build:remove-->
+    <script src="//localhost:35729/livereload.js"></script>
+    <!-- /build-->
+    <script>
+      $(document).ready(function() {
+      //Check Header Enrichment
+      checkHE();
+      });
+    </script>
+  </body>
+</html>
