@@ -1,7 +1,7 @@
 {
-  "name": "vodafonetv",
-  "version": "0.0.0",
-  "description": "landing page for vodavoneTV campiagn",
+  "name": "Mondiamedia_Template",
+  "version": "1.0.0",
+  "description": "Scaffolding for Mondia media landing pages",
   "main": "main.js",
   "directories": {
     "test": "tests"
@@ -17,17 +17,22 @@
     "grunt-contrib-jasmine": "~0.5.1",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-less": "~0.8.2",
+    "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-uglify": "0.2.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-html-prettyprinter": "^1.5.0",
     "grunt-include-js": "^1.0.3",
+    "grunt-prettify": "^0.4.0",
     "grunt-processhtml": "^0.4.1"
   },
   "scripts": {
     "test": "grunt test"
   },
   "keywords": [
-    "my project"
+    "MondiaMedia",
+    "Template",
+    "Scaffolding"
   ],
-  "author": "mohamed",
+  "author": "Mohamed Salem",
   "license": "MIT"
 }
