@@ -20,15 +20,24 @@ module.exports = function (grunt) {
 					pretty: true
 				},
 				files: {
-					'dist/pug.index.html': 'pug/index.pug'
+					'dist/pug.index.html': 'pug/index.pug',
+					'dist/pug.wifi.html': 'pug/wifi.pug'
 				}
 			}
 		},
 
 		'html-prettyprinter': {
-			custom: {
+			index: {
 		      src: 'dist/pug.index.html',
 		      dest: 'index.html',
+		      options: {
+		        indent_size: 1,
+		        indent_char: '\t'
+		      }
+		    },
+		    wifi: {
+		      src: 'dist/pug.wifi.html',
+		      dest: 'wifi.html',
 		      options: {
 		        indent_size: 1,
 		        indent_char: '\t'
@@ -116,7 +125,8 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				files: {
-					'upload/index-unmin.html': ['index.html']
+					'upload/index-unmin.html': ['index.html'],
+					'upload/wifi-unmin.html': ['wifi.html']
 				}
 			}
 		},
@@ -127,7 +137,8 @@ module.exports = function (grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'upload/index.html': ['upload/index-unmin.html']     
+					'upload/index.html': ['upload/index-unmin.html'],     
+					'upload/wifi.html': ['upload/wifi-unmin.html']     
 				},
 			}
 		},
@@ -136,7 +147,8 @@ module.exports = function (grunt) {
 				files: ['<%= jshint.files %>', 'js/**/*.js', 'less/**/*.less', 'pug/**/*.pug'],
 				tasks: ['pug', 'html-prettyprinter', 'concat', 'less'], // templates here ,  'jshint', 'jasmine'
 				options: {
-					livereload: true 
+					livereload: true,
+					Port: 35739
 				},
 			},
 		}
@@ -172,7 +184,7 @@ module.exports = function (grunt) {
 
 		// tasks
 		grunt.registerTask('test',    ['jshint', 'jasmine']);
-		grunt.registerTask('default', ['pug', 'html-prettyprinter', 'concat', 'less', 'include_js:build']);
-		grunt.registerTask('dist',    ['uglify', 'cssmin', 'include_js:build', 'processhtml', 'htmlmin' ]);
+		grunt.registerTask('default', ['pug', 'html-prettyprinter', 'concat', 'less', 'include_js:source']);
+		grunt.registerTask('dist',    ['uglify:js', 'cssmin', 'include_js:build', 'processhtml', 'htmlmin' ]);
 
 	};

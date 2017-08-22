@@ -1,25 +1,33 @@
-.lang
-	a(href='#') العربية
-#defaultWrapper.wrapper
-	// Variable movie options
-	.content
-		img.logo(src='http://du-camp.mondiamediamena.com/assets/img/coolishCool/logo.png', alt='')
-		button.subbtn SUBSCRIBE NOW
-		.price 5 AED per Week!
-		.termstxt
-			| You will be subscribed to 'MyMixtapes'.Your account would be debited with AED 5 per week. Subscription would be automatically renewed until you unsubscribe from the service. To continue, click on subscribe button above.
-// end wrapper
-// start WiFi wrapper
-#wifiwrapper.wrapper(style='display: none;')
-	.content
-		img.logo(src='http://du-camp.mondiamediamena.com/assets/img/coolishCool/logo.png', alt='')
-		.inner-Bottom
-			button.subbtn
-				| DOWNLOAD NOW!
-				img.dlbtn(src='http://du-camp.mondiamediamena.com/assets/img/coolishCool/dl_btn.png')
-			.slogan
-				| Unlimited premium Games
-			.slogan2
-				| To download on your mobile phone
-			.termstxt
-				| When you subscribe to this service, you agree on koolishcool terms and condition. You can unsubscribe anytime by visiting My Account. To use this service, you need to be older than 18 years old, or have received permission from your parents or the ones who pays for your mobile bills.
+- var bg_img = "http://du-camp.mondiamediamena.com/assets/img/mymixtapes/oman/bg.jpg";
+- var alt_bg_img = "Mymixtapes Background Image"
+- var logo = "http://du-camp.mondiamediamena.com/assets/img/logos/du_white.png";
+- var google_play_store_white = "http://du-camp.mondiamediamena.com/assets/img/logos/google_play_white.png";
+- var apple_store_white = "http://du-camp.mondiamediamena.com/assets/img/logos/apple_store_whit.png";
+
+#container.show-iframe-state.en
+	.image_backdrop
+		img(src = bg_img, alt= alt_bg_img)
+	#landscape
+	.view-area
+		form#sub-confirm(method='get')
+			#default-state(style='display: none;')
+				label.welcome-notify.price(style='display:none;') only for OMR 1/Week
+				input#pcid(type='hidden', value='')
+				input#mobtag(type='hidden', value='')
+				input#image(type='hidden', value='http://camp.mymixtapesmena.com/mymixtapes/om/img/concent.jpg')
+				a#subscribe.btn.subscribe(href='javascript:subscribe();', onclick='subscribe();')
+					span SUBSCRIBE NOW!
+					.hotspot.subscribe
+			#double-confirmation.space-top-15.space-bottom-30
+				a#confirm.btn.space-bottom-20(href='javascript:subscribe();', onclick='subscribe();')
+					span Subscribe Now!
+				p.space-bottom-20 DOWNLOAD THE APP NOW AND LISTEN TO YOUR FAVORITE MUSIC OFFLINE
+				p.doubl-des.space-bottom-20
+					|	only for 3 KED/day
+			.apple-gooogle-stores
+				P GET IT ON
+				img(src= google_play_store_white, alt='google_play_store_white')
+				img(src= apple_store_white, alt='apple_store_white')
+	//- .footer-disclaimer
+		.disclaimer
+			p Mymixtapes is a service that lets you listen to your favorite and latest music and allows you create your own playlist online/offline. To make use of this service, one must be more than 18 years old to have received permission from your parents or person who is authorized to pay your mobile bill. This service is compatible with Android & iOS handsets. Subscription would be auto renewed at OMR 1/weekly, automatically until you unsubscribe. You can unsubscribe from this service, anytime, by sending UNSUB MM to 92034. Data charges apply.

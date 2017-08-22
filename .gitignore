@@ -1,16 +1,2 @@
-# OS
-.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
-
-# scaffold
-dist
-upload
-vendor
-
-# node
-node_modules
-
-# sass
-.sass-cache
+node_modules/
+dist/

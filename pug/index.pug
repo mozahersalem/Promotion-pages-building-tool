@@ -1,19 +1,18 @@
+include variables.pug
+
 doctype html
 html(lang="en")
 
 	include head/head.pug
 	|
 	|
-	|
-	|
-	include utils/utils.pug
-	|
+	include head/utils.pug
 	|
 	|	
 	body
-		include content/content.pug
+		include content/du/du_3_wrappers.pug
 		|
 		|
 		include scripts/scripts.pug
 		|
-		include scripts/checkMe_script.pug
+		//- include scripts/checkMe_script.pug
