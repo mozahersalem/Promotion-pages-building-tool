@@ -9,15 +9,20 @@ function subscribe() {
     ********************************************************************************/
     
     
-    var sublink = 'http://igames.ae/mobileportal/promo/landing/ooredoo-oman/igames/igames-direct.jsp?';
+    var sublink = 'http://igames.ae/mobileportal/promo/landing/ooredoo-ku/igames/igames-direct.jsp?';
+
+    var font_family = "Roboto";
+
+    var background_color = "e2e2e2";
     
-    var redirect_when_wifi = 'http://camp.igames.ae/';
+    var redirect_when_wifi = '';
     
-    var thankYou_page_link = 'http://camp.igames.ae/';
+    // link for thank you page or portal
+    var link_after_consent_page = '';
     
-    var image_link = 'http%3A%2F%2Fdu-camp.mondiamediamena.com%2Fassets%2Fimg%2FDMC-11%2Fbg.jpg';
+    var image_link = 'http://du-camp.mondiamediamena.com/assets/img/mymixtapes/oman/bg.jpg';
     
-    var redirect_after_thank_you_page =  'http%3A%2F%2Figames.ae%2Fweb%2Fdu%2Fhome';
+    var redirect_after_thank_you_page =  'http://igames.ae/web/du/home';
 
     /********************************************************************************
     ********************************************************************************
@@ -54,18 +59,19 @@ function subscribe() {
     } else {
         // wifi page link
         sublink += 'wifiRedirect=' + redirect_when_wifi;
-        sublink += '&redirectAfterTY=' + redirect_after_thank_you_page;
     }
 
     var sublink;
- 
+    
+    sublink += "tncFontFamily=" + font_family;
+    sublink += "&cpBgColor="  + background_color;
 
-    // thank you page link
-    sublink += '&isty=true&';
     // aublink += '&wifiRedirect=' + redirect_when_wifi;
     sublink += '&image=' + image_link; 
-    sublink += '&cgredirect=' + thankYou_page_link;
-    sublink += '&redirectAfterTY=' + redirect_after_thank_you_page;
+    // redirection after consent page
+    sublink += '&cgredirect=' + link_after_consent_page;
+
+    sublink += '&isty=true&redirectAfterTY=' + redirect_after_thank_you_page;
 
     var pcid = getQueryString('pcid');
     if (pcid && pcid.length !== 0) {

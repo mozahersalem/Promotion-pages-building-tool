@@ -138,7 +138,8 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'upload/index.html': ['upload/index-unmin.html'],     
-					'upload/wifi.html': ['upload/wifi-unmin.html']     
+					'upload/wifi.html': ['upload/wifi-unmin.html'],   
+					'upload/success.html': ['thank_you/success.html']   
 				},
 			}
 		},
@@ -148,10 +149,10 @@ module.exports = function (grunt) {
 				tasks: ['pug', 'html-prettyprinter', 'concat', 'less'], // templates here ,  'jshint', 'jasmine'
 				options: {
 					livereload: true,
-					Port: 35739
+					debounceDelay: 2000,
 				},
 			},
-		}
+		},
 
 	});
 

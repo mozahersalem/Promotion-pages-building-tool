@@ -8,10 +8,10 @@ var projectId = "29";
 var sxid;
 //promoter id used for tracking addon. by default is 0
 var pcid = "0";
-//redirect url after user subscribed successfully
-var redirectUrlAfterSub = "http://google.ae";
 //default url if subsribe user didn't work
 var defaultUrl = "http://du-portal.mondiamedia.com/app/southasian/home?language=en";
+//redirect url after user subscribed successfully
+var redirectUrlAfterSub = "success.html?isty=true&redirectAfterTY=" + defaultUrl;
 
 
 // GET USER TOKEN
@@ -292,3 +292,56 @@ function validatePhone(txtPhone) {
     var filter = /^[0-9-+]+$/;
     return filter.test(txtPhone);
 }
+
+function subscribe() {
+    var sublink = 'http://mymixtapesmena.com/mobileportal/promo/landing/ooredoo-oman/mymixtapes/mymixtapes-direct.jsp?' +
+    'wifiRedirect=http://camp.mymixtapesmena.com/mymixtapes/om/flow2/flow2.html' +
+    '&image=http://camp.mymixtapesmena.com/mymixtapes/om/img/concent.jpg';
+    var pcid = document.getElementById("pcid").value;
+    var mobtag = document.getElementById("mobtag").value;
+    var image = document.getElementById("image").value;
+    if (pcid && pcid.length !== 0) {
+        sublink += '&pcid=' + pcid;
+    }
+    if (mobtag && mobtag.length !== 0) {
+        sublink += '&mobtag=' + mobtag;
+    }
+    sublink += "&cgredirect=http://mymixtapesmena.com/mobileportal/mymixtape/";
+    if (image && image.length !== 0) {
+        sublink += "&image=" + image;
+    }
+    location.replace(sublink);
+    return false;
+}
+
+
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-85449201-2', 'auto');
+ga('send', 'pageview');
+
+window.onload = function () {
+    var getQueryString = function (field, url) {
+        var href = url ? url : window.location.href;
+        var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+        var string = reg.exec(href);
+        return string ? string[1] : null;
+    };
+    var sxid = getQueryString('sxid');
+    var pcid = getQueryString('pcid');
+    if (pcid && pcid.length !== 0) {
+        document.getElementById("pcid").value = pcid;
+    }
+    if (sxid && sxid.length !== 0) {
+        document.getElementById("mobtag").value = sxid;
+    }
+};
