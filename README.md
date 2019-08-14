@@ -75,15 +75,3 @@ index.html
 
 ```
 
-
-#### \_FINAL\_UPLOADS content ^ folder will upload intp landing page server path
-
-```
-    EX. for du istream
-    .com/Currency /projectID / club ID   / package ID or package / Jira issue
-    .com/aed      /    5     / 56830008  /  69 || (d || w)       / DMC-22
-
-    du-camp.mondiamediamena.com
-    /aed/du/29/56830008/d/DUE-163/min/south_asian.html
-
-```
