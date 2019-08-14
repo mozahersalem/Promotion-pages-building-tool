@@ -1,0 +1,62 @@
+include ../PATHES/paths.pug
+
+//-
+	********************************************************
+	********************************************************
+	**************  Variables Linked to HTML  **************
+	********************************************************
+	********************************************************
+
+- var service = "lp";
+
+//- Landing page lp.html
+//- Main text
+- var header_1 = "3 jours gratuits";
+- var orangeWord = " Gaming <span style='background-color:#ff6a00;padding:0;'>box</span>";
+- var header_2 = "Jouer et Télécharger en illimité avec";
+- var header_3 = "";
+- var header_4 = "";
+
+//- subtext -new line-
+- var sub_text_1 = "";
+- var sub_text_2 = "";
+- var sub_text_3 = "";
+
+- var already_sub_header_1 = "You are already subscribed";
+- var already_sub_header_2 = "We will redirect you to";
+- var already_sub_header_3 = club_name;
+
+//- what will be in subscribe button
+- var subscribe_button = "Accepter";
+- var subscribe_button_confirm = "S’abonner";
+//- what will be in converm button
+- var confirm_opt_btn = "";
+
+- var enter_your_number = "";
+- var confirm_pin = "";
+
+//- price section
+- var price = "Prix de l’abonnement : 1.9 TND/semaine renouvelable automatiquement";
+
+- var disclaimer_1 = "This is a weekly recurring R5.00 subscription that allows you to stream all the videos within the chosen channel."
+- var disclaimer_2 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_3 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_4 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_link = "Terms & Conditions.";
+
+//- WIFI page wifi.html
+- var header_1_wifi = "S'il vous plaît activer vos données mobiles";
+- var sub_text_1_wifi = "Éteignez votre WIFI et activez les données mobiles. Une fois terminé, cliquez sur le bouton Actualiser."
+- var wifi_button = "Actualiser";
+
+//- Success page ty.html
+- var header_1_ty = "FELICITATION";
+- var sub_text_1_ty = "vous vous êtes abonné avec succès " + service + "! Commencer à regarder illimité " + service + " à présent! Cliquez simplement sur le bouton ci-dessous.";
+- var sub_text_2_ty = "* " + service + "! est libre de naviguer, pas besoin de données!";
+- var success_button = "";
+
+//- Error page error.html
+- var header_1_error = "Désolé, une erreur est survenue, veuillez cliquer sur le bouton suivant pour accéder à " + service;
+- var sub_text_1_error = "";
+- var sub_text_2_error = "";
+- var error_button = "Actualiser";

@@ -1,0 +1,98 @@
+//- ********************************************************
+//- ********************************************************
+//- ********************************************************
+//- *******************  mixin for paths  ******************
+//- ********************************************************
+//- ********************************************************
+
+
+//- ********************************************************
+//- ********************************************************
+//- HEAD partianls
+//- ********************************************************
+//- ********************************************************
+
+mixin head
+	include ../head/head
+
+
+mixin jQuery
+	include ../head/jQuery
+
+
+mixin GoogleAnalytics
+	include ../head/GoogleAnalytics
+
+
+mixin block_iFrame
+	include ../head/block_iFrame
+
+mixin GoogleTagManagerHead
+	include ../head/GTM_head
+
+
+
+//- ********************************************************
+//- ********************************************************
+//- BODY partials
+//- ********************************************************
+//- ********************************************************
+
+
+//- mixin HiddenInputs
+//- 	include ../body/content/partials/hidden_inputs.pug
+
+mixin GoogleTagManagerBody
+	include ../body/scripts/GTM_body
+
+mixin content
+	include ../body/content/layout/content
+
+mixin content_swiper
+	include ../body/content/layout/content-swiper
+
+
+mixin content_tc
+	include ../body/content/layout/content-tc
+
+mixin content_wifi
+	include ../body/content/layout/content-wifi
+
+mixin content_ty
+	include ../body/content/layout/content-ty
+
+mixin content_error
+	include ../body/content/layout/content-error
+
+
+
+mixin app_js
+	include ../body/scripts/scripts
+
+
+mixin checkHE_js
+	include ../body/scripts/checkHE.js.pug
+
+mixin swiper_js
+	include ../body/scripts/swiper.js.pug
+
+
+mixin create_Default_Success_URLs
+	include ../body/scripts/createDefaultSuccessURLS.pug
+
+mixin countDown_js
+	include ../body/scripts/countDown.js.pug
+
+
+mixin GoogleAdwords
+	include ../body/scripts/GoogleAdwords
+
+//- for success pages
+mixin countdown(Wait, seconds, p1, p2)
+	p= Wait
+		| &nbsp;
+		span#countdown &nbsp;
+		| &nbsp;
+		span=seconds
+	p.space-top-10= p1
+	p.space-top-5= p2

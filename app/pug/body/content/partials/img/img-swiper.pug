@@ -1,0 +1,18 @@
+- var sliderImages = ["imga01.jpg", "imga02.jpg", "imga03.jpg", "imga04.jpg", "imga05.jpg", "imga06.jpg"]
+- var sliderThumbs = ["imgb01.png", "imgb02.png", "imgb03.png", "imgb04.png", "imgb05.png", "imgb06.png"]
+
+mixin slider(img)
+	div(class="swiper-slide" style='background-image:url('+ images_path + page_name + '/' + img +')')
+
+div(class="swiper-container gallery-top")
+	.swiper-wrapper
+		each img in sliderImages
+			+slider(img)
+	//Add Arrows
+	.swiper-button-prev
+	.swiper-button-next
+
+div(class="swiper-container gallery-thumbs")
+	.swiper-wrapper
+		each img in sliderThumbs
+			+slider(img)

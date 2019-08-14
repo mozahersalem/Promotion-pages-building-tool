@@ -1,0 +1,91 @@
+include ../PATHES/paths
+
+//-
+    ********************************************************
+    ********************************************************
+    **************  Variables Linked to HTML  **************
+    ********************************************************
+    ********************************************************
+
+
+//- SO IMPORTANT
+- var Jira_ticket_number = "XXX-000";
+
+- var analyticsTracking = ""
+
+//- fill here for same pages in same club
+- var subscriptionTypeId = "";
+- var page_name = "";
+- var club_name = ""
+- var pageTitle = Jira_ticket_number + "-" + page_name;
+- var service = "lp";
+
+//- Images assests pase
+//- - var images_path = "http://du-camp.mondiamediamena.com/assets/img/" + Jira_ticket_number + "/" ;
+- var images_path = "../../assets/img/";
+
+
+
+//-  images
+- var bg_img = "";
+- var alt_bg_img = ""
+- var icons = images_path + "icons.png";
+
+//- Logos
+- var logo = images_path + "logo.png";
+- var alt_logo = "Omantel MyWorld Logo";
+//- text under logo
+- var logo_helper = "";
+
+
+//- Landing page lp.html
+//- Main text
+- var header_1 = "Subscribe and play unlimited games";
+- var header_2 = "";
+- var header_3 = "";
+- var header_4 = "";
+
+//- subtext -new line-
+- var sub_text_1 = "2 days free trial!";
+- var sub_text_2 = "";
+- var sub_text_3 = "";
+
+- var already_sub_header_1 = "You are already subscribed";
+- var already_sub_header_2 = "We will redirect you to";
+- var already_sub_header_3 = club_name;
+
+//- what will be in subscribe button
+- var subscribe_button = "Play now";
+- var subscribe_button_confirm = "Confirm";
+//- what will be in converm button
+- var confirm_opt_btn = "CONFIRM";
+
+- var enter_your_number = "Enter your mobile number"
+- var confirm_pin = "Enter pin code"
+
+//- price section
+- var price = "only 200BZ daily! free trial for two days!";
+
+- var disclaimer_1 = "This is a weekly recurring R5.00 subscription that allows you to stream all the videos within the chosen channel."
+- var disclaimer_2 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_3 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_4 = "* Clicking the button it means you 'Buy/Subscribe now' and you agree to the ";
+- var disclaimer_link = "Terms & Conditions.";
+
+//- WIFI page wifi.html
+- var header_1_wifi = "S'il vous plaît activer vos données mobiles";
+- var sub_text_1_wifi = "Éteignez votre WIFI et activez les données mobiles. Une fois terminé, cliquez sur le bouton Actualiser."
+- var wifi_button = "Actualiser";
+
+//- Success page ty.html
+- var header_1_ty = "FELICITATION";
+//- var sub_text_1_ty = "vous vous êtes abonné avec succès " + service + "! Commencer à regarder illimité " + service + " à présent! Cliquez simplement sur le bouton ci-dessous.";
+//- var sub_text_2_ty = "* " + service + "! est libre de naviguer, pas besoin de données!";
+//- Final url to redirect to from success page
+- var servicePortalURL = "https://www.google.com/";
+- var success_button = "";
+//- Error page error.html
+- var header_1_error = "Désolé, une erreur est survenue, veuillez cliquer sur le bouton suivant pour accéder à " + service;
+- var sub_text_1_error = "";
+- var sub_text_2_error = "";
+- var error_button = "Actualiser";

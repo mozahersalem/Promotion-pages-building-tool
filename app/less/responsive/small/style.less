@@ -1,0 +1,193 @@
+
+// --------------------------------------------------------
+// PLEASE READ
+// --------------------------------------------------------
+
+// DO NOT write variables here
+// All Variable in
+// settings/utils.less
+
+// this file is duplicated autamaticaly to
+// responsive/small/
+// and
+// responsive/meduim/
+
+// All css valuse
+// are relative to @base variable which is 1em
+
+
+/*
+	--------------------------------------------------------
+	--------------------------------------------------------
+	Main Landing page style
+	--------------------------------------------------------
+	--------------------------------------------------------
+*/
+
+body {
+	width: @full-width;
+	font-family: sans-serif;
+	background-color: @page-bg-color;
+	color: @text-color;
+  background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+body.ar {
+
+	.header, .price {
+		direction: rtl;
+	}
+
+}
+
+.wrapper {
+	width: @full-width;
+	position: relative;
+	font-weight: normal;
+}
+
+.content {
+	padding: (@base * .6) @base;
+}
+
+.ty    #main-content,
+.error #main-content,
+.tc    #main-content,
+.wifi   #main-content {
+	// margin-top: 0;
+}
+
+@gradient-color-bottom-start: rgba(0, 0, 0, 0.0);
+@gradient-color-top-end: @page-bg-color;
+
+#img-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: -moz-linear-gradient(top, @gradient-color-bottom-start 60%, @gradient-color-top-end 95%,  @page-bg-color 100%);
+	background: -webkit-linear-gradient(top, @gradient-color-bottom-start 60%, @gradient-color-top-end 95%, @page-bg-color 100%);
+	background: linear-gradient(to bottom, @gradient-color-bottom-start 60%, @gradient-color-top-end 95%, @page-bg-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+}
+.backdrop-image {
+	width: @full-width;
+	img {
+		width: @full-width;
+	}
+}
+
+.logo {
+	width: @logo-width;
+	height: @logo-width;
+	position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.header {
+	text-transform: @header-text-transform;
+	// line-height: @header-line-height;
+	color: @header-color;
+	font-size: @header-font-size;
+	font-weight: @headr-font-weight;
+
+	&.main-header {
+		text-shadow: 2px 0px 20px #ffed00, -2px 0px 20px #505050;
+		font-size: @base * 3.2;
+		color: #fff;
+		margin-bottom: @base * .15;
+		width: 60%;
+		margin-right: auto;
+		margin-left: auto;
+		transform: rotate(-8deg);
+		margin-bottom: @base * .7;
+	}
+}
+
+
+.sub-text {
+	font-size: @sub-text-font-size;
+	text-transform: @sub-text-text-transform;
+	color: @sub-text-color;
+}
+
+
+.sub-button {
+	width: @btn-with;
+	background-color: @btn-bg-color;
+	color: @btn-color;
+	line-height: @btn-lineHeight;
+	border: @btn-border;
+	border-radius: @btn-border-radius;
+	font-size: @btn-font-size;
+	font-weight: @btn-font-weight;
+	display: block;
+	text-decoration: none;
+	margin: 0 auto;
+}
+
+#confirm-btn {
+	// background-color: #26b200;
+	// color: #ff6800;
+}
+
+.price {
+	color: @price-color;
+	font-size: @price-font-size;
+	font-weight: inherit;
+}
+
+.icon {
+	height: 2em;
+}
+
+
+.disclaimer {
+	color: @price-color;
+	font-size: @base * .8;
+
+	p.disclaimer-p {
+		text-align: left;
+	}
+
+	.disclaimer-link {
+		color: @text-color;
+	}
+}
+
+
+#countdown-container {
+	font-size: @base * 1.3;
+	font-weight: 400;
+}
+
+.flex-item {
+	flex-grow: 1;
+}
+
+.staticText {
+	text-align: justify;
+
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: @text-color;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: @text-color;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: @text-color;
+}

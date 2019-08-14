@@ -1,0 +1,30 @@
+include ../_vars
+include ../_vars-AR
+include variables/vars
+
+
+doctype
+html(lang= page_lang)
+
+	head
+		meta(charset='UTF-8')
+		//- +GoogleTagManagerHead
+		+head
+		//- +jQuery
+		//- +block_iFrame
+
+	body(class = page_name + " error")
+		//- +GoogleTagManagerBody
+		//- +HiddenInputs
+
+		//- #vodacome-header
+		#portal-proxy-header
+
+
+		+content_error
+		//- +app_js
+		//- +checkHE_js
+		//- +create_Default_Success_URLs
+
+		#portal-proxy-footer
+		//- #vodacome-footer
