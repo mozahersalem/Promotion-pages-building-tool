@@ -1,0 +1,29 @@
+include ../_vars.pug
+include variables/vars.pug
+
+
+doctype
+html(lang= page_lang)
+
+	head
+		meta(charset='UTF-8')
+		//- +GoogleTagManagerHead
+		+head
+		//- +jQuery
+		//- +block_iFrame
+
+	body(class = page_name + " tc")
+		//- +GoogleTagManagerBody
+		//- +HiddenInputs
+		
+		//- #vodacome-header
+		#portal-proxy-header
+
+		
+		+content_tc
+		//- +app_js
+		//- +checkHE_js
+		//- +create_Default_Success_URLs
+
+		#portal-proxy-footer
+		//- #vodacome-footer
